@@ -35,19 +35,22 @@ const defaultTheme = {
 export const lightTheme = { ...defaultTheme, ...light }
 export const darkTheme = { ...defaultTheme, ...dark }
 
-type theme = {
-  bg: bg
-  text: textColors
+export type theme = {
+  bg: {
+    primary: string
+    elements: string
+    input: string
+  }
+  text: {
+    primary: string
+  }
+  fontSizes: {
+    small: string
+    regular: string
+  }
+  fontWeights: {
+    body: number
+    bold: number
+    heading: number
+  }
 }
-
-type textColors = {
-  primary: string
-}
-
-type bg = {
-  primary: string
-  elements: string
-  input: string
-}
-
-export default theme

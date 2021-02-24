@@ -1,9 +1,4 @@
 import { createGlobalStyle, css } from 'styled-components'
-import Theme from './theme'
-
-type ThemeProps = {
-  theme: Theme
-}
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -23,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     font-family: "Nunito Sans" !important;
-    ${({ theme }: ThemeProps) => css`
+    ${({ theme }) => css`
       background-color: ${theme.bg.primary};
     `} 
   }
